@@ -244,12 +244,19 @@ Let's figure out how to create posts! One key concept to note is the structure o
 - A user has many posts
 - A post belongs to a user
 - A post has many posts [as comments]
+- A post belongs to a post [as parent]
 
 With this structure we do not need to create a separate model declaration for comments. The **post has many post** relation means that the target model will be given a `postId` as a foreign key referring to the declaring model. So any post with a `postId` value of null is a top-level post, while all other posts are comments.
 
 Let's figure out how to get posts working!
 
 1. Navigate to `/models.js` and if you haven't done so already, add any/all [associations](http://docs.sequelizejs.com/manual/tutorial/associations.html) you will need for this part
+    - For the `post has many post` & `post belongs to post` relationship you would do something like the following:
+        ```js
+        Post.hasMany( Post, { as: 'children', foreignKey: 'postId' } );
+        Post.belongsTo( Post, { as: 'parent', foreignKey: 'postId' } );
+        ```
+    - Try any figure out the rest of the associations by yourself
 1. Create a `NewPost` component in the `/frontend/components` folder
     - Make sure that this is **NOT** a stateless component (so it should use `class [class-name] extends React.Component`), as we will be using `refs` in this section)
 1. Within the `<Switch>` you should render the `NewPost` component on the `/post/new` route
