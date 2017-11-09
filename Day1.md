@@ -200,7 +200,7 @@ Additionally, these instructions will require you to extensively look at the [se
         - `POST /login`: Use the `passport` LocalStrategy implementation you wrote on an earlier part to authenticate users. On a successful login you should send back the user object in the response (make sure that the password isn't included in the response)
         - `GET /logout`: End the current session
         - `GET /[username]`: Server should respond with a user object for the `username` entered as a param (make sure that the password isn't included in the response)
-        - `GET /` (`/api/users`): Server should respond with user information for the current user (keep in mind that for security purposes you should not send the password in this request)
+        - `GET /`: This is the `/api/user` route. Server should respond with user information for the current user (keep in mind that for security purposes you should not send the password in this request)
 
 ## Part 6: `axios`
 In this section we'll use `axios` to connect our frontend with our backend!

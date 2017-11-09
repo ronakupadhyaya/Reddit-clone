@@ -17,6 +17,7 @@ The provided set of instructions start off heavily guided, but eventually become
 This day will cover schema design, react router implementation, sequelize implementation, passport implementation, user registration/login, setting up associations, post creation, and viewing all posts.
 
 ## [Day 2](./Day2.md)
+This day will cover comment creation, getting a thread of comments given one, deleting user data, deleting threads, getting all user data (incl. comments and posts), voting on posts, sorting by votes, subreddit integration (bonus).
 
 ![](./images/xkcdSQL.png)
 
