@@ -14,11 +14,9 @@ Required Stack:
 The provided set of instructions start off heavily guided, but eventually become increasingly abstract. This structure will hopefully ease you into the exercise. **Note** that this is a long exercise, so pace yourself accordingly. **BEFORE YOU BEGIN** you must create a potential schema and get it approved by one of the instructors.
 
 ## [Day 1](./Day1.md)
+This day will cover schema design, react router implementation, sequelize implementation, passport implementation, user registration/login, setting up associations, post creation, and viewing all posts.
 
 ## [Day 2](./Day2.md)
-
-## C'est Fini!
-Congratulations! You've learned & understood SQL (hopefully), and made an awesome clone of Reddit.
 
 ![](./images/xkcdSQL.png)
 

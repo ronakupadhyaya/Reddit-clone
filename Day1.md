@@ -14,13 +14,13 @@ Based on the functionality described within this exercise, create a potential sc
     Solution
     </summary><p>
 
-        1. Install `body-parser` in your application by running the following command `npm i -S body-parser`
-        1. Require the package at the top of your `/server.js` file
-        1. Add the below lines of code to ensure that it's being used as middleware
-            ```js
-            app.use(bodyParser.json());
-            app.use(bodyParser.urlencoded({ extended: false }));
-            ```
+    1. Install `body-parser` in your application by running the following command `npm i -S body-parser`
+    1. Require the package at the top of your `/server.js` file
+    1. Add the below lines of code to ensure that it's being used as middleware
+        ```js
+        app.use(bodyParser.json());
+        app.use(bodyParser.urlencoded({ extended: false }));
+        ```
 
     </p></details>
 
@@ -158,7 +158,9 @@ To make sure you've properly connected to/created your database perform the foll
     - `updatedAt`: The timestamp for when the entry was last modified (initially equal to the `createdAt` timestamp)
 
 ## :warning: :warning: :warning: **IMPORTANT DISCLAIMER** :warning: :warning: :warning:
-We will soon be starting the frontend section of this assignment. We strongly advise you to **NOT** focus on styling your application until after you're done. You will need to create a Modal in the next part, and you may want to use one of [`react-bootstrap`](https://react-bootstrap.github.io/getting-started.html) or [`semantic-ui-react`](https://react.semantic-ui.com/introduction). **DO NOT** use both as that will cause problems.
+We will soon be starting the frontend section of this assignment. We strongly advise you to **NOT** focus on styling your application until after you're done.
+
+Also, you will need to create a Modal in the next part, and you may want to use one of [`react-bootstrap`](https://react-bootstrap.github.io/getting-started.html) or [`semantic-ui-react`](https://react.semantic-ui.com/introduction). **DO NOT** use both together as that will cause problems.
 
 ## Part 4: FrontPage
 Now that you've completed all the boring setup stuff, let's create some components! The `AppContainer` will serve as the Front Page for the remaining set of instructions.
@@ -167,9 +169,9 @@ Now that you've completed all the boring setup stuff, let's create some componen
     - `Header`: Consists of **logo** and **title**
     - `Feed`: List of all posts
     - `SideBar`: Render the following components within `SideBar`
-  	    - `SubmitPost`: A button to submit a new post
-    		- `Login` & `Register`: Login and Register buttons
-    		- `Description`: The description of the current subreddit
+        - `SubmitPost`: A button to submit a new post
+        - `Login` & `Register`: Login and Register buttons
+        - `Description`: The description of the current subreddit
 1. Create a `Modal` for both Login & Registration. Since both functions only require a `username` & `password` you can just make one modal with two buttons (like below). This modal should be hidden unless `isModalOpen` is set to `true` in Redux state.
     ![](./images/modalAccount.png)
 1. Add `isModalOpen` to Redux state and initially set it to `false`
@@ -178,7 +180,7 @@ Now that you've completed all the boring setup stuff, let's create some componen
 1. When the `Login` or `Register` buttons are clicked you should fire a `TOGGLE_LOGIN_MODAL` action
 
 #### Goal
-This is what your page should contain (sans the post).
+This is what your page should contain (except for the post and the upvote/downvote button).
 
 ![](./images/frontPage.png)
 
@@ -191,7 +193,7 @@ Additionally, these instructions will require you to extensively look at the [se
 
 1. Perform a `GET` request via Postman to the `/api/users` route & make sure you get `{success: true}` as your response (this route already exists)
     - Once you get this response navigate to `/backend/routes.js` and delete this route
-1. Require your `/models.js` file at the top of your `/backend/routes.js` file so that you can get access to your model declarations. These will help you create, modify, and delete the data in your database (`sequelize` is to `postgres` as `mongoose` is to `mongodb`).
+1. Require your `/models.js` file at the top of your `/backend/routes.js` file so that you can get access to your model declarations. These will help you create, modify, and delete the data in your database.
 1. Create the following `user` routes:
     - `/user`
         - `POST /register`: Given a `username` and `password`, create a new entry in your `users` table. Remember that we can use [`.create()`](http://docs.sequelizejs.com/class/lib/model.js~Model.html#static-method-create) to INSERT data into our tables. If user registration is successful, this route should respond with the newly created user.

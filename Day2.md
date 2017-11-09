@@ -63,3 +63,6 @@ In this section you will set up functionality to create new posts
 
 ## Subreddits
 You've successfully made *most* of reddit. Now come the subreddits!
+
+## C'est Fini!
+Congratulations! You've learned & understood SQL (hopefully), and made an awesome clone of Reddit.
