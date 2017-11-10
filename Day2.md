@@ -54,7 +54,13 @@ Now let's create some `vote` routes. For these you will have to modify some rout
 1. **(Bonus)**: Make the `upvote` OR `downvote` buttons selected if a user has voted on a certain post
 
 ## Part 3: Subreddits [BONUS]
-You've successfully made *most* of reddit. Now come the subreddits!
+You've successfully made *most* of reddit. Now come the subreddits! Modify your application to add the following features:
+- Add subreddits to your schema
+- Allow users to create & own subreddits
+- Allow users to delete subreddits (only the ones they own)
+- Modify post creation functionality to ensure that each post belongs to a subreddit
+- Allow users to subscribe to subreddits
+- **ONLY** display posts from subscribed subreddits on frontpage
 
 ## C'est Fini!
 Congratulations! You've learned & understood SQL (hopefully), and made an awesome clone of Reddit.
